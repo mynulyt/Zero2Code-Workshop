@@ -1,3 +1,5 @@
+import 'package:first_app/day_two/lec.dart';
+import 'package:first_app/login.dart';
 import 'package:first_app/ui.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(scaffoldBackgroundColor: Colors.black),
       title: 'Material App',
 
       home: Scaffold(
@@ -25,7 +28,7 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-        body: UiPage(),
+        body: LoginPage(),
       ),
     );
   }

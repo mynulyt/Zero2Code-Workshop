@@ -1,17 +1,33 @@
 import 'package:flutter/material.dart';
 
 class UiPage extends StatelessWidget {
-  const UiPage({super.key});
+  final String name;
+  final String email;
+  const UiPage({super.key, required this.name, required this.email});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         height: 600,
         child: Stack(
           children: [
             Positioned(
               child: Container(
+                child: Column(
+                  children: [
+                    SizedBox(height: 150),
+                    Text(
+                      name,
+                      style: TextStyle(fontSize: 40, color: Colors.white),
+                    ),
+                    SizedBox(height: 20),
+                    Text(
+                      email,
+                      style: TextStyle(fontSize: 20, color: Colors.white54),
+                    ),
+                  ],
+                ),
                 height: 300,
                 width: double.infinity,
                 decoration: BoxDecoration(
